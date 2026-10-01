@@ -21,7 +21,8 @@
 title: Area Weighted Re-Aggregation
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This is the AWR portion of the site
+  This is the AWR portion of the site. It contains several workflows accomplishing Area 
+  Weighted Re-Aggregation. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
