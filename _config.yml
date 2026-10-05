@@ -27,10 +27,43 @@ baseurl: "/awr" # the subpath of your site, e.g. /blog
 url: "https://geomethods.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  samoleary-portfolio
 
+permalink: /:categories/:title/
+defaults:
+  #_pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      author_profile: true
+      sidebar:
+        nav: "docs"
+  #_posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+
+
+
+
 # Build settings
-theme: minima
+theme: jekyll-theme-minimal
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+site_navigation: main
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-archives
 
 # Exclude from processing.
 # The following items will not be processed, by default.
