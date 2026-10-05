@@ -1,0 +1,31 @@
+main:
+  - title: "About"
+    url: /about/
+  - title: ""
+  - title: "Learn more"
+
+docs:
+  - title: "Home"
+    url: /
+    #children:
+      #- title: "Development Updates"
+      #  url: /dev_updates/
+     # - title: "Update #1"
+      #  url: /dev_update/update-1/
+  - title: "Metadata" 
+    url: /metadata/
+  - title: "QGIS"
+    url: /qgis/
+  - title: "R"
+    url: /r/
+  - title: "ESRI Ecosystem"
+    url: /esri/
+    children:
+      - title: "ArcGIS Pro"
+        url: /esri/arcgis/
+      - title: "ArcPy"
+        url: /esri/arcpy/
+
+
+
+
