@@ -1,0 +1,12 @@
+---
+layout: single
+title:  "Welcome to Geomethod - AWR!"
+header: 
+  image: "assets/images/crosswalk_ex.jpg"
+date:   2026-10-05 11:44:00 -0400
+categories: dev_update
+tags:
+ - dev_updates
+---
+
+This is the first post on this site! There is a lot of work to go to get everything up an running, but please check back in every few weeks to see how things are going

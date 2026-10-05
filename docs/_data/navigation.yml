@@ -1,7 +1,8 @@
 main:
   - title: "About"
     url: /about/
-  - title: ""
+  - title: "Tags"
+    url: /tags/
   - title: "Learn more"
 
 docs:
