@@ -1,12 +1,14 @@
 main:
-  - title: "About"
-    url: /about/
-  - title: "Context"
+  - title: "Conceptual Guide"
+    url: /guide/
+  - title: "Set Up"
     url: /setup/
   - title: "Tags"
     url: /tags/
-  - title: Home
+  - title: "Main Site"
     url: https://geomethods.github.io
+  - title: "About"
+    about: /about/
 
  
 
