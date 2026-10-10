@@ -1,9 +1,14 @@
 main:
   - title: "About"
     url: /about/
+  - title: "Context"
+    url: /setup/
   - title: "Tags"
     url: /tags/
-  - title: "Learn more"
+  - title: Home
+    url: https://geomethods.github.io
+
+ 
 
 docs:
   - title: "Home"
@@ -14,18 +19,18 @@ docs:
      # - title: "Update #1"
       #  url: /dev_update/update-1/
   - title: "Metadata" 
-    url: /metadata/
+    url: docs/metadata/
   - title: "QGIS"
-    url: /qgis/
+    url: docs/qgis/
   - title: "R"
-    url: /r/
+    url: docs/r/
   - title: "ESRI Ecosystem"
-    url: /esri/
+    url: docs/esri/
     children:
       - title: "ArcGIS Pro"
-        url: /esri/arcgis/
+        url: docs/esri/arcgis/
       - title: "ArcPy"
-        url: /esri/arcpy/
+        url: docs/esri/arcpy/
 
 
 
