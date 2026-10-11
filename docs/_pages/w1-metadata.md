@@ -7,7 +7,7 @@ layout: single
 ## Item 1
 
 - `Title`: NH State Senate Boundaries 
-- `Abstract`: Brief description of the data source
+- `Abstract`: State Senate Boundaries in NH without demographic information
 - `Spatial Coverage`: State of New Hampshire
 - `Spatial Resolution`: 2022 State Senate Districts
 - `Spatial Representation Type`: Vector Polygon
@@ -21,7 +21,7 @@ layout: single
 ## Item 2
 
 - `Title`: NH Tract Boundaries
-- `Abstract`: Census Tracts in New Hampshire
+- `Abstract`: Census Tracts in New Hampshire with demographic information. They do not nest neatly within State Senate Boundaries
 - `Spatial Coverage`: State of New Hampshire
 - `Spatial Resolution`: Census Tracts
 - `Spatial Representation Type`: Vector Polygon
