@@ -17,11 +17,11 @@ And many more!
 
 ### Getting Senate Districts 
 
-Follow this [link](https://new-hampshire-geodata-portal-1-nhgranit.hub.arcgis.com/datasets/new-hampshire-senate-district-boundaries-2022/explore?location=44.000000%2C-71.581250%2C8) and download the 2022 senate districts. Feel free to look at the maps provided to get an idea of what the data looks like. See [Workflow #1 Metadata](/workflow-1/metadata/) for more information on this data source. 
+Follow this [link](https://new-hampshire-geodata-portal-1-nhgranit.hub.arcgis.com/datasets/new-hampshire-senate-district-boundaries-2022/explore?location=44.000000%2C-71.581250%2C8) and download the 2022 senate districts. Feel free to look at the maps provided to get an idea of what the data looks like. See [Workflow #1 Metadata]({{ "/docs/metadata/" | relative_url }})  for more information on this data source. 
 
 ### Getting Census Tracts
 
-To get Census data, one of the most efficient ways is using tidycensus in R. See the script below to download NH Census Tracts. Again,see [Workflow #1 Metadata](/workflow-1/metadata/) for more information on this data source
+To get Census data, one of the most efficient ways is using tidycensus in R. See the script below to download NH Census Tracts. Again, see [Workflow #1 Metadata]({{ "/docs/metadata/" | relative_url }})  for more information on this data source
 
   ```r
     install.packages(c("sf","tidycensus","tidyverse"))
