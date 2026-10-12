@@ -32,11 +32,11 @@ To get Census data, one of the most efficient ways is using tidycensus in R. See
       geography = "tract",
       year = 2020,
       survey = "acs5",
-      table = "B05003",
+      table = "B02001",
       state = "NH",
       output = "wide",
       geometry = TRUE
     )
 
-    st_write(nh_tracts,"nh_tracts.gpkg")
+    st_write(nh_tracts,"nh_tracts_race.gpkg")
   ```

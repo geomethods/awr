@@ -2,9 +2,23 @@
 layout: single
 title:  "QGIS Step #1"
 date:   2026-10-10 00:00:00 -0400
-categories: dev_update
 tags:
  - step-1
 ---
 
-This is Step #1 of the QGIS workflow
+## Step #1: Setting up the Environment
+
+Download the data required for this workflow, following the steps in the [Set Up]({{ '/setup/' | relative_url }}) tab. Fire up QGIS, and open up a new QGIS Project; This workflow was developed on Version 3.44.14-Solothurn. Drag the Senate and Tract boundaries in from the browser. 
+
+### Downloading MiMiGIS
+
+This workflow employd the MiMiGIS plugin for its **Group By** function, as it provides a more effective way for aggregating and dissolving geometries than vanilla QGIS.
+
+{% include figure popup=true image_path="/assets/images/qgis/plugin_nav.png" alt="Alt text" caption="" %} 
+To install this plugin, first navigate to the Plugins tab on the masthead. 
+
+{% include figure popup=true image_path="/assets/images/qgis/mimi_nav.png" alt="Alt text" caption="" %} 
+Enter MiMiGIS into the search bar, and press install. Once installed, you can verify the plugin was downloaded by searching for **Group By** in the Processing Toolbar.
+
+Here is what the QGIS window should look like after this step
+{% include figure popup=true image_path="/assets/images/qgis/step_1_win.png" alt="Alt text" caption="" %} 

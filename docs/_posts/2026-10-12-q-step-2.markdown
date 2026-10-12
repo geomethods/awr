@@ -1,0 +1,16 @@
+---
+layout: single
+title:  "QGIS Step #2"
+date:   2026-10-10 00:00:00 -0400
+tags:
+ - step-2
+---
+
+## Step #2: Calculating Source Polygon Area
+
+In this workflow, the demographic information we desire for our analysis is located within Census Tracts, and our desired geometry is the State Senate Districts. Therefore, Census Tracts are our `Source Polygons`.
+
+In order to calculate area, left click on the tracts layer to open up the Attribute table, followed by the Field Calculator (the abacus symbol).
+{% include figure popup=true image_path="/assets/images/qgis/step_2_field.png
+" alt="Alt text" caption="" %} 
+Enter sArea as the name, Decimal as the type, and area($geometry) as the expression. Press Ok or Apply to add the field to the attribute table. The formula area($geometry) calculates the planar area of each tract. 
