@@ -9,7 +9,7 @@ Hello Geographers! Before using this site, please read `How to use site` below a
 
 ## How to use this site
 
-Platform workflows are located on the left. You can click between them to see how the entire workflow differs across platforms. If you want to see how a specific step changes (or doesn't!) between platforms, see the [Tags](/tags/) tab on the masthead.
+Platform workflows are located on the left. You can click between them to see how the entire workflow differs across platforms. If you want to see how a specific step changes (or doesn't!) between platforms, see the [Compare]({{ '/search/' | relative_url }}) tab on the masthead.
 
 ### Tags
 

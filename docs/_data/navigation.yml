@@ -3,8 +3,8 @@ main:
     url: /guide/
   - title: "Set Up"
     url: /setup/
-  - title: "Tags"
-    url: /tags/
+  - title: "Compare"
+    url: /search/
   - title: "Main Site"
     url: https://geomethods.github.io
   
