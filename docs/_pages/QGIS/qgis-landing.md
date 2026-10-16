@@ -36,6 +36,16 @@ In order to calculate area, left click on the tracts layer to open up the Attrib
 " alt="Alt text" caption="" %} 
 Enter sArea as the name, Decimal as the type, and area($geometry) as the expression. Press Ok or Apply to add the field to the attribute table. The formula area($geometry) calculates the planar area of each tract. 
 
+## Step #3: Union 
+
+## Step #4: Calculate Area Weighted Attributes
+
+## Step #5: Re-aggregate 
+
+## Step #6: Calculate Post-hoc attributes
+
+When discussing gerrymandering through a geospatial lense, a helpful metric to calculate is `Compactness`. By comparing a given district's geometry to a circle, compactness provides a concrete way to see how irregular a given district is. 
+
 
 
 
