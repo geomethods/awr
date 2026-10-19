@@ -25,7 +25,7 @@ Enter MiMiGIS into the search bar, and press install. Once installed, you can ve
 We also need to Reproject the Census Tracts to CRS: EPSG:3437-NAD83 in order to ensure accurate area calculations. 
 
 Here is what the QGIS window should look like after this step
-{% include figure popup=true image_path="/assets/images/qgis/step_1_win.png" alt="Alt text" caption="" %} 
+{% include figure popup=true image_path="/assets/images/qgis/q_1_env.png" alt="Alt text" caption="" %} 
 
 ## Step #2: Calculating Source Polygon Area
 
@@ -57,7 +57,7 @@ Multiply the Area Weight by your chosen attributes. Assuming population is distr
 " alt="Alt text" caption="" %}  
 ## Step #5: Re-aggregate 
 After calculating the area weighted attributes, the final step is to re-aggregate the fragments in terms of the Senate districts. Using the unique identifier for the Senate districts, use the MiMiGIS Group By Function to regain the original senate geometry 
-{% include figure popup=true image_path="/assets/images/qgis/aw_ex_q.png
+{% include figure popup=true image_path="/assets/images/qgis/q_groupby.png
 " alt="Alt text" caption="" %}
 
 ## Step #6: Calculate Post-hoc attributes

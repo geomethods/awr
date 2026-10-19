@@ -21,4 +21,4 @@ To install this plugin, first navigate to the Plugins tab on the masthead.
 Enter MiMiGIS into the search bar, and press install. Once installed, you can verify the plugin was downloaded by searching for **Group By** in the Processing Toolbar.
 
 Here is what the QGIS window should look like after this step
-{% include figure popup=true image_path="/assets/images/qgis/step_1_win.png" alt="Alt text" caption="" %} 
+{% include figure popup=true image_path="/assets/images/qgis/q_1_env.png" alt="Alt text" caption="" %} 
