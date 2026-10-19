@@ -1,0 +1,18 @@
+---
+layout: single
+title:  "QGIS Step #4"
+date:   2026-10-19 00:00:00 -0400
+tags:
+ - step-4
+---
+
+## Step #4: Calculate Area Weighted Attributes
+Once you have obtained the fragments of the Senate Districts and Tracts, calculate their area.
+{% include figure popup=true image_path="/assets/images/qgis/fArea_q.png
+" alt="Alt text" caption="" %} 
+Then, divide fragment area by the area of the `Source Polygons`. This gives us the amount of space each fragment takes up in terms of source polygon. This is the Area Weight.
+{% include figure popup=true image_path="/assets/images/qgis/aw_calc_q.png
+" alt="Alt text" caption="" %} 
+Multiply the Area Weight by your chosen attributes. Assuming population is distributed equally across each tract, this gives you the amount of people in each fragment.
+{% include figure popup=true image_path="/assets/images/qgis/aw_ex_q.png
+" alt="Alt text" caption="" %}  

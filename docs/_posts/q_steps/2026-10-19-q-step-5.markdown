@@ -1,0 +1,12 @@
+---
+layout: single
+title:  "QGIS Step #5"
+date:   2026-10-19 00:00:00 -0400
+tags:
+ - step-5
+---
+
+## Step #5: Re-aggregate 
+After calculating the area weighted attributes, the final step is to re-aggregate the fragments in terms of the Senate districts. Using the unique identifier for the Senate districts, use the MiMiGIS Group By Function to regain the original senate geometry 
+{% include figure popup=true image_path="/assets/images/qgis/aw_ex_q.png
+" alt="Alt text" caption="" %}

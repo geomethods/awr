@@ -13,7 +13,7 @@ Download the data required for this workflow, following the steps in the [Set Up
 
 ### Downloading MiMiGIS
 
-This workflow employd the MiMiGIS plugin for its **Group By** function, as it provides a more effective way for aggregating and dissolving geometries than vanilla QGIS.
+This workflow employs the MiMiGIS plugin for its **Group By** function, as it provides a more effective way for aggregating and dissolving geometries than vanilla QGIS.
 
 {% include figure popup=true image_path="/assets/images/qgis/plugin_nav.png" alt="Alt text" caption="" %} 
 To install this plugin, first navigate to the Plugins tab on the masthead. 
@@ -38,13 +38,35 @@ Enter sArea as the name, Decimal as the type, and area($geometry) as the express
 
 ## Step #3: Union 
 
-## Step #4: Calculate Area Weighted Attributes
+The next step is use the Vector Overlay tool **Union**. 
+{% include figure popup=true image_path="/assets/images/qgis/union_q.png
+" alt="Alt text" caption="" %} 
+Here is what your Layers Panel should look like following the Union.
+{% include figure popup=true image_path="/assets/images/qgis/post_union_env.png
+" alt="Alt text" caption="" %} 
 
+## Step #4: Calculate Area Weighted Attributes
+Once you have obtained the fragments of the Senate Districts and Tracts, calculate their area.
+{% include figure popup=true image_path="/assets/images/qgis/fArea_q.png
+" alt="Alt text" caption="" %} 
+Then, divide fragment area by the area of the `Source Polygons`. This gives us the amount of space each fragment takes up in terms of source polygon. This is the Area Weight.
+{% include figure popup=true image_path="/assets/images/qgis/aw_calc_q.png
+" alt="Alt text" caption="" %} 
+Multiply the Area Weight by your chosen attributes. Assuming population is distributed equally across each tract, this gives you the amount of people in each fragment.
+{% include figure popup=true image_path="/assets/images/qgis/aw_ex_q.png
+" alt="Alt text" caption="" %}  
 ## Step #5: Re-aggregate 
+After calculating the area weighted attributes, the final step is to re-aggregate the fragments in terms of the Senate districts. Using the unique identifier for the Senate districts, use the MiMiGIS Group By Function to regain the original senate geometry 
+{% include figure popup=true image_path="/assets/images/qgis/aw_ex_q.png
+" alt="Alt text" caption="" %}
 
 ## Step #6: Calculate Post-hoc attributes
 
 When discussing gerrymandering through a geospatial lense, a helpful metric to calculate is `Compactness`. By comparing a given district's geometry to a circle, compactness provides a concrete way to see how irregular a given district is. 
+
+Calculate the district area and perimeter, and then use the formula below to calculate compactness.
+{% include figure popup=true image_path="/assets/images/qgis/compactness_q.png
+" alt="Alt text" caption="" %}
 
 
 

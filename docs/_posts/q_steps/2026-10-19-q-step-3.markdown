@@ -1,0 +1,16 @@
+---
+layout: single
+title:  "QGIS Step #3"
+date:   2026-10-19 00:00:00 -0400
+tags:
+ - step-3
+---
+
+## Step #3: Union 
+
+The next step is use the Vector Overlay tool **Union**. 
+{% include figure popup=true image_path="/assets/images/qgis/union_q.png
+" alt="Alt text" caption="" %} 
+Here is what your Layers Panel should look like following the Union.
+{% include figure popup=true image_path="/assets/images/qgis/post_union_env.png
+" alt="Alt text" caption="" %} 
