@@ -5,7 +5,7 @@ permalink: /docs/R/
 ---
 
 ## Workflow Diagram
-
+{% include figure popup=true image_path="/assets/images/R/r_awr_wf.png" alt="Alt text" caption="R Workflow" %} 
 
 ## Step #1: Setting up the Environment
     ```r
@@ -29,9 +29,8 @@ permalink: /docs/R/
 
 
 ## Step #3: Union 
-    ```r
+    ```r    
     frags <- st_intersection(tracts_reproj,senate_districts)
-
     ```
 
 
@@ -47,7 +46,9 @@ permalink: /docs/R/
     aw_asian = aw * B02001_005E
   )
     ```
+
 We can use the mutate function again to add attributes to our layer
+    
 ## Step #5: Re-aggregate 
     ```r
     aw_districts <- frags %>%
@@ -73,6 +74,7 @@ We can use the mutate function again to add attributes to our layer
             compactness = (400 * dArea * 3.1415926)/(dPerimeter^2)
         )
     ```
+
 ## Abstraction
     ```r
     ```
