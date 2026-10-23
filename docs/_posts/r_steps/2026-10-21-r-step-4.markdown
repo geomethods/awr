@@ -6,4 +6,17 @@ tags:
  - step-4
 ---
 
+## Step #4: Calculate Area Weighted Attributes
+We can use the mutate function again to add fields to our layer. Calculate fragment area, the area weight, and the area-weighted attributes. Since st_area calculations includes units, wrap the aw calculation in as.numeric() to ensure your result only contains a number.
 
+    ```r
+    frags <- frags %>% 
+  mutate(
+    fArea = st_area(frags),
+    aw = as.numeric(fArea/sArea),
+    aw_pop = aw * B02001_001E,
+    aw_white = aw * B02001_002E,
+    aw_black = aw * B02001_003E,
+    aw_asian = aw * B02001_005E
+  )
+    ```

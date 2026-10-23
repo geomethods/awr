@@ -6,5 +6,21 @@ tags:
  - step-1
 ---
 
+## Step #1: Setting up the Environment
+Download the data required for this workflow, following the steps in the [Set Up]({{ '/setup/' | relative_url }}) tab. This workflow was developed on RStudio version 2026.01.2+418, and uses the sf and tidyverse libraries. Read in the data using the st_read() command, and reproject tracts into EPSG 3437 using the st_transform function 
 
+    ```r
+    #Set up the Environment
+    library(sf)
+    library(tidyverse)
+
+    #Read in Senate Districts
+    senate_districts <- st_read("New_Hampshire_Senate_District_Boundaries_-_2022.shp")
+
+    #Read in and Reproject tracts
+    nh_tracts_race<- st_read("nh_tracts_final.gpkg")
+    tracts_reproj <- st_transform(nh_tracts_race,3437)
+    ```
+    
+*Tip: if you see st_ in front of something in are, it comes from the sf library*
 

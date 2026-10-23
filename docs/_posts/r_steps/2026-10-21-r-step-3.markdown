@@ -6,4 +6,9 @@ tags:
  - step-3
 ---
 
+## Step #3: Union 
+The next step is to use st_intersection to generate fragments to re-aggregate. The function st_union does exist, but don't use it! It acts similarly to a singleparts to multiparts tool in a Geoprocessing GUI. 
 
+    ```r    
+    frags <- st_intersection(tracts_reproj,senate_districts)
+    ```

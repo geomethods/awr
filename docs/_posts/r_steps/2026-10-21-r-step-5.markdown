@@ -6,4 +6,19 @@ tags:
  - step-5
 ---
 
+## Step #5: Re-aggregate 
+The final step is to re-aggregate our geometry to districts. Use `Senate2022` in the group by function to instruct R you want to group your layer by an attribute. 
 
+Next, use the summarise() function to aggregate the new fields we created and dissolve geometries. Setting na.rm = TRUE tells R to ignore NA values, which can be helpful to add if the values is aw_districts don't make sense. 
+
+    ```r
+    aw_districts <- frags %>%
+        group_by(Senate2022) %>%
+        summarise(
+            # sum  numeric columns 
+            population = sum(aw_pop, na.rm = TRUE),
+            black = sum(aw_black, na.rm = TRUE),
+            white = sum(aw_white, na.rm = TRUE),
+            asian = sum(aw_asian, na.rm = TRUE)      
+        )
+    ```

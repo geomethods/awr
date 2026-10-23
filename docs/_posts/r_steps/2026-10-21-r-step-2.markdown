@@ -6,4 +6,12 @@ tags:
  - step-2
 ---
 
+## Step #2: Calculating Source Polygon Area
+Once the data has been read in and is in the  appropriate projection, we can calculate source polygon area. To add an field to a layer in R, use the mutate function. Put the field name, then an equals sign, followed by whatever you would like to calculate. In this case, we use st_area() 
 
+    ```r
+    tracts_reproj <- tracts_reproj %>% 
+        mutate(sArea = st_area(tracts_reproj))
+    ```
+
+*Tip: if your area values are strange, check your projection using st_crs()*
