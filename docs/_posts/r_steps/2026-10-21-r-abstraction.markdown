@@ -42,6 +42,7 @@ Here is one way this can be done in R for this specific example
 }
 
 aw_districts <- awr(nh_tracts_race,senate_districts)
+
     ```
 
 

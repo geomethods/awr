@@ -22,5 +22,5 @@ Download the data required for this workflow, following the steps in the [Set Up
     tracts_reproj <- st_transform(nh_tracts_race,3437)
     ```
     
-*Tip: if you see st_ in front of something in are, it comes from the sf library*
+*Tip: if you see st_ in front of something in R, it comes from the sf library*
 

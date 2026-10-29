@@ -5,7 +5,7 @@ permalink: /docs/r/
 ---
 
 ## Workflow Diagram
-{% include figure popup=true image_path="/assets/images/R/r_awr_wf.png" alt="Alt text" caption="R Workflow" %} 
+{% include figure popup=true image_path="/assets/images/R/r-awr-f-wf.png" alt="Alt text" caption="R Workflow" %} 
 
 ## Step #1: Setting up the Environment
 Download the data required for this workflow, following the steps in the [Set Up]({{ '/setup/' | relative_url }}) tab. This workflow was developed on RStudio version 2026.01.2+418, and uses the sf and tidyverse libraries. Read in the data using the st_read() command, and reproject tracts into EPSG 3437 using the st_transform function 
@@ -23,7 +23,7 @@ Download the data required for this workflow, following the steps in the [Set Up
     tracts_reproj <- st_transform(nh_tracts_race,3437)
     ```
 
-*Tip: if you see st_ in front of something in are, it comes from the sf library*
+*Tip: if you see st_ in front of something in R, it comes from the sf library*
 
 ## Step #2: Calculating Source Polygon Area
 Once the data has been read in and is in the  appropriate projection, we can calculate source polygon area. To add an field to a layer in R, use the mutate function. Put the field name, then an equals sign, followed by whatever you would like to calculate. In this case, we use st_area() 
@@ -125,6 +125,7 @@ Here is one way this can be done in R for this specific example
 }
 
 aw_districts <- awr(nh_tracts_race,senate_districts)
+
     ```
 
 

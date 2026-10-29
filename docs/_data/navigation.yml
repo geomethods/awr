@@ -3,6 +3,8 @@ main:
     url: /guide/
   - title: "Set Up"
     url: /setup/
+  - title: "Help"
+    url: /help/
   - title: "Compare"
     url: /search/
   - title: "Main Site"
@@ -14,11 +16,6 @@ main:
 docs:
   - title: "Home"
     url: /
-    #children:
-      #- title: "Development Updates"
-      #  url: /dev_updates/
-     # - title: "Update #1"
-      #  url: /dev_update/update-1/
   - title: "Metadata" 
     url: docs/metadata/
   - title: "QGIS"
@@ -32,6 +29,8 @@ docs:
         url: docs/esri/arcgis/
       - title: "ArcPy"
         url: docs/esri/arcpy/
+  - title: GeoPandas
+    url: docs/geopandas/
 
 
 
