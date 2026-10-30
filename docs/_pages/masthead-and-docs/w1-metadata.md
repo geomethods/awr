@@ -11,7 +11,7 @@ layout: single
 - `Spatial Coverage`: State of New Hampshire
 - `Spatial Resolution`: 2022 State Senate Districts
 - `Spatial Representation Type`: Vector Polygon
-- `Spatial Reference System`: Specify the geographic or projected coordinate system for the study
+- `Spatial Reference System`: 3437
 - `Temporal Coverage`: 2022
 - `Temporal Resolution`: 2022-2032
 - `Lineage`: Downloaded from the NH State GeoData portal [here](https://new-hampshire-geodata-portal-1-nhgranit.hub.arcgis.com/datasets/new-hampshire-senate-district-boundaries-2022/explore?location=44.000000%2C-71.581250%2C8)
@@ -25,7 +25,7 @@ layout: single
 - `Spatial Coverage`: State of New Hampshire
 - `Spatial Resolution`: Census Tracts
 - `Spatial Representation Type`: Vector Polygon
-- `Spatial Reference System`: Specify the geographic or projected coordinate system for the study
+- `Spatial Reference System`: 4326
 - `Temporal Coverage`: 2016-2020
 - `Temporal Resolution`: 2020
 - `Lineage`: Downloaded from RStudio using tidycensus 1.8.1, using the following query:
