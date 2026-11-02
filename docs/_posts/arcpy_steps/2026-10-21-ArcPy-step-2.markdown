@@ -6,4 +6,15 @@ tags:
  - step-2
 ---
 
+## Step #2: Calculating Source Polygon Area
+In this workflow, the demographic information we desire for our analysis is located within Census Tracts, and our desired geometry is the State Senate Districts. Therefore, Census Tracts are our `Source Polygons`.
+
+Use the **Calculate Geometry Attributes** function to calculate the planar area for the source polygons. 
+
+
+    ```py
+
+    tracts_reproj = arcpy.management.CalculateGeometryAttributes(in_features="tracts_reproj", geometry_property=[["sArea", "AREA"]])[0] 
+    ```
+
 

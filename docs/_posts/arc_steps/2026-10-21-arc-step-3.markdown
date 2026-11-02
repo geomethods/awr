@@ -5,4 +5,9 @@ date:   2026-10-21 00:00:00 -0400
 tags:
  - step-3
 ---
+## Step #3: Union 
+
+The next step is use the Vector Overlay tool **Union**. This gives you an attribute table with the fields and geometries of both layers.
+{% include figure popup=true image_path="/assets/images/arcgis/arc_union_awr.png
+" alt="Alt text" caption="" %} 
 

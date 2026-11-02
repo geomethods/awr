@@ -5,6 +5,11 @@ date:   2026-10-21 00:00:00 -0400
 tags:
  - step-1
 ---
+## Step #1: Setting up the Environment
+This workflow was developed on ArcGIS Pro 3.7. Download the data required for this workflow, following the steps in the [Set Up]({{ '/setup/' | relative_url }}) tab. 
 
+Next, Reproject tracts into EPSG: 3437 to ensure accurate area calculations. 
+{% include figure popup=true image_path="/assets/images/arcgis/arc_reproj_awr.png
+" alt="Alt text" caption="" %} 
 
 

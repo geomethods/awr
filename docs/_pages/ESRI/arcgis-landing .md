@@ -55,7 +55,7 @@ Next, use the following formula in **Calculate Fields** to obtain compactness fo
 {% include figure popup=true image_path="/assets/images/arcgis/arc_comp_awr.png
 " alt="Alt text" caption="" %}
 
-## Step #7: Abstraction
+## Abstraction
 
 ESRI allows you to abstract geoprocessing workflows into functional models using `Model Builder`. Although we will not go into detail on how to use this tool here, an example of how this workflow would look like in model builder has been provided below
 

@@ -5,4 +5,19 @@ date:   2026-10-19 00:00:00 -0400
 tags:
  - step-4
 ---
+## Step #4: Calculate Area Weighted Attributes
+Once you have obtained the fragments of the Senate Districts and Tracts, calculate their area using **Calculate Geometry Attributes**. 
 
+    ```py
+
+    frags = arcpy.management.CalculateGeometryAttributes(in_features="frags", geometry_property=[["fArea", "AREA"]])[0]
+
+    ```
+
+Then, divide fragment area by the area of the `Source Polygons`. This gives us the amount of space each fragment takes up in terms of source polygon. This is the Area Weight. Multiply the Area Weight by your chosen attributes, using the **Calculate Fields (multiple)** tool for the greatest efficiency. Assuming population is distributed equally across each tract, this gives you the amount of people in each fragment.
+
+    ```py
+    
+    frags = arcpy.management.CalculateFields(in_table=frags, expression_type="PYTHON3", fields=[["aw", "!fArea!/!sArea!", "", "DOUBLE"], ["aw_pop", "!aw!!B02001_001E!", "", "DOUBLE"], ["aw_white", "!aw!!B02001_002E!", "", "DOUBLE"], ["aw_black", "!aw!!B02001_003E!", "", "DOUBLE"], ["aw_asian", "!aw!!B02001_005E!", "", "DOUBLE"]])[0]
+
+    ```

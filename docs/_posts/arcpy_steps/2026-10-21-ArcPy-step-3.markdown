@@ -6,3 +6,11 @@ tags:
  - step-3
 ---
 
+## Step #3: Union 
+
+The next step is use the Vector Overlay tool **Union**. This gives you an attribute table with the fields and geometries of both layers.
+
+    ```py
+    arcpy.analysis.Union(in_features=[["tracts_reproj", ""], ["senate_districts", ""]], out_feature_class="frags") 
+
+    ```

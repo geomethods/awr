@@ -5,5 +5,8 @@ date:   2026-10-19 00:00:00 -0400
 tags:
  - step-5
 ---
-
+## Step #5: Re-aggregate 
+Use the **Dissolve** tool to re-aggregate the fragments to districts. Use Senate2022 as the Dissolve field, and enter the area weighted attributes you calculated into the Statistics Fields. Calculate sum for each attribute to obtain totals for the districts.  
+{% include figure popup=true image_path="/assets/images/arcgis/arc_diss_awr.png
+" alt="Alt text" caption="" %}
 

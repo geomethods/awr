@@ -6,3 +6,11 @@ tags:
  - step-5
 ---
 
+## Step #5: Re-aggregate 
+Use the **Dissolve** tool to re-aggregate the fragments to districts. Use Senate2022 as the Dissolve field, and enter the area weighted attributes you calculated into the Statistics Fields. Calculate sum for each attribute to obtain totals for the districts. 
+
+    ```py
+
+    arcpy.management.Dissolve(in_features=frags, out_feature_class="aw_districts", dissolve_field=["Senate2022"], statistics_fields=[["aw_pop", "SUM"], ["aw_white", "SUM"], ["aw_black", "SUM"], ["aw_asian", "SUM"]])
+
+    ```

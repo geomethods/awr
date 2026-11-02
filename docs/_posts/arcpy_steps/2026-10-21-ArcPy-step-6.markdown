@@ -5,4 +5,17 @@ date:   2026-10-21 00:00:00 -0400
 tags:
  - step-6
 ---
+## Step #6: Calculate Post-Hoc Attributes
+When discussing gerrymandering through a geospatial lense, a helpful metric to calculate is `Compactness`. By comparing a given district's geometry to a circle, compactness provides a concrete way to see how irregular a given district is. 
 
+First, use **Calculate Geometry Attributes**. to calculate area and perimeter for the senate districts
+
+    ```py
+        aw_districts = arcpy.management.CalculateGeometryAttributes(in_features="aw_districts", geometry_property=[["dArea", "AREA"], ["dPerim", "PERIMETER_LENGTH"]])[0]
+    ```
+
+Next, use the following formula in **Calculate Fields** to obtain compactness for each district.
+
+    ```py
+        aw_districts = arcpy.management.CalculateField(in_table="aw_districts", field="compactness", expression="(400* 3.1415* !dArea!)/!dPerim!**2", field_type="DOUBLE")[0]
+    ```
