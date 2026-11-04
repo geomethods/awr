@@ -12,7 +12,7 @@ Download the data required for this workflow, following the steps in the [Set Up
 
 ### Downloading MiMiGIS
 
-This workflow employd the MiMiGIS plugin for its **Group By** function, as it provides a more effective way for aggregating and dissolving geometries than vanilla QGIS.
+This workflow employs the MiMiGIS plugin for its **Group By** function, as it provides a more effective way for aggregating and dissolving geometries than vanilla QGIS.
 
 {% include figure popup=true image_path="/assets/images/qgis/plugin_nav.png" alt="Alt text" caption="" %} 
 To install this plugin, first navigate to the Plugins tab on the masthead. 
