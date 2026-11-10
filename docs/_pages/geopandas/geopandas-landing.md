@@ -6,14 +6,16 @@ permalink: /docs/geopandas/
 
 ## Workflow Diagram
 
-
 ## Step #1: Setting up the Environment
 
 
     ```py
+   tracts = geopandas.read_file("data/nh_tracts_final.gpkg")
+    #import 
+    senate = geopandas.read_file("data/New_Hampshire_Senate_District_Boundaries_-_2022.shp")
 
-    tracts = tracts.to_crs(crs)
-    senate = senate.to_crs(crs)
+    tracts = tracts.to_crs(3437)
+    senate = senate.to_crs(3437)
 
     ```
 
