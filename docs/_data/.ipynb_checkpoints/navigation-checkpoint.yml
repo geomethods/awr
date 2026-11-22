@@ -1,0 +1,37 @@
+main:
+  - title: "Conceptual Guide"
+    url: /guide/
+  - title: "Set Up"
+    url: /setup/
+  - title: "Help"
+    url: /help/
+  - title: "Compare"
+    url: /search/
+  - title: "Main Site"
+    url: https://geomethods.github.io
+  
+
+ 
+
+docs:
+  - title: "Home"
+    url: /
+  - title: "Metadata" 
+    url: docs/metadata/
+  - title: "QGIS"
+    url: docs/qgis/
+  - title: "R"
+    url: docs/r/
+  - title: "ESRI Ecosystem"
+    url: docs/esri/
+    children:
+      - title: "ArcGIS Pro"
+        url: docs/esri/arcgis/
+      - title: "ArcPy"
+        url: docs/esri/arcpy/
+  - title: GeoPandas
+    url: docs/geopandas/
+
+
+
+
