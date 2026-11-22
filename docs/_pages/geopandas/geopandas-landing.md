@@ -39,75 +39,75 @@ pip install jupyterlab
 
 Once the required packages are installed, read in the data to the notebook, and reproject layers into the designated CRS. Paths to read in data may be different. In geopandas, many of the functions are implemented with a `.` followed by the name function and preceded by the name of the object the function is acting on, in this case tracts or senate districts.
 
-    ```py
+```py
 
-    install geopandas as gpd
-    tracts = geopandas.read_file("data/nh_tracts_final.gpkg") 
-    senate = geopandas.read_file("data/New_Hampshire_Senate_District_Boundaries_-_2022.shp")
+install geopandas as gpd
+tracts = geopandas.read_file("data/nh_tracts_final.gpkg") 
+senate = geopandas.read_file("data/New_Hampshire_Senate_District_Boundaries_-_2022.shp")
 
-    tracts = tracts.to_crs(3437)
-    senate = senate.to_crs(3437)
+tracts = tracts.to_crs(3437)
+senate = senate.to_crs(3437)
 
-    ```
+```
 
 ## Step #2: Calculating Source Polygon 
 
 In order to calculate area, we need to both create a new field and calculate a geometry. To create a new field, enter brackets to the right of the object and the name of the field in quotes, as seen below. To calculate area, use the simple function below.
 
 
-    ```py
+```py
 
-    # Step 2: source polygon area
-    tracts["sArea"] = tracts.geometry.area
+# Step 2: source polygon area
+tracts["sArea"] = tracts.geometry.area
 
-    ```
+```
 
 
 ## Step #3: Union 
 
 The next step is to perform the union between tracts and senate districts, creating fragments. In order to prevent duplicate columns, limit the columns copied over to the Senate ID and the layers geometry.
 
-    ```r 
+```r 
 
-    frags = gpd.overlay(
-        tracts,
-        senate[["Senate2022", "geometry"]],  #
-        how="union",
-        keep_geom_type=True,
-    )
+frags = gpd.overlay(
+    tracts,
+    senate[["Senate2022", "geometry"]],  #
+    how="union",
+    keep_geom_type=True,
+)
 
-    ```
+```
 
 
 ## Step #4: Calculate Area Weighted Attributes
 
 After the union, calculate the area weight and area weighted attributes using the syntax below. 
 
-    ```py
+```py
 
-    frags["fArea"] = frags.geometry.area
-    frags["aw"] = frags["fArea"] / frags["sArea"]
+frags["fArea"] = frags.geometry.area
+frags["aw"] = frags["fArea"] / frags["sArea"]
 
-    frags["population"] = frags["aw"] * frags["B02001_001E"]
-    frags["white"]      = frags["aw"] * frags["B02001_002E"]
-    frags["black"]      = frags["aw"] * frags["B02001_003E"]
-    frags["asian"]      = frags["aw"] * frags["B02001_005E"]
+frags["population"] = frags["aw"] * frags["B02001_001E"]
+frags["white"]      = frags["aw"] * frags["B02001_002E"]
+frags["black"]      = frags["aw"] * frags["B02001_003E"]
+frags["asian"]      = frags["aw"] * frags["B02001_005E"]
 
-    ```
+```
     
 ## Step #5: Re-aggregate 
 
 Aggregate the fragments to senate districts by dissolving a selection of the fragments fields by the unique ID for senate, Senate2022. Use the aggfunc option to sum the area weighted attributes to the new senate geometries.  
 
-    ```py
+```py
 
-     aw_districts = (
-        frags[["Senate2022", "population", "white", "black", "asian", "geometry"]]
-        .dissolve(by="Senate2022", aggfunc="sum")
-        .reset_index()
-    )
- 
-    ```
+    aw_districts = (
+    frags[["Senate2022", "population", "white", "black", "asian", "geometry"]]
+    .dissolve(by="Senate2022", aggfunc="sum")
+    .reset_index()
+)
+
+```
 
 
 ## Step #6: Calculate Post-hoc attributes
@@ -116,64 +116,64 @@ When discussing gerrymandering through a geospatial lense, a helpful metric to c
 
 Calculate area, perimeter, and compactness using the syntax established above. 
 
-    ```py
+```py
 
-    aw_districts["dArea"] = aw_districts
-    aw_districts["perimeter"] = aw_districts.geometry.perimeter
-    aw_districts["compactness"] = 4 * 3.14159 * aw_districts[dArea] / (aw_districts["perimeter"] ** 2)
+aw_districts["dArea"] = aw_districts
+aw_districts["perimeter"] = aw_districts.geometry.perimeter
+aw_districts["compactness"] = 4 * 3.14159 * aw_districts[dArea] / (aw_districts["perimeter"] ** 2)
 
-    ```
+```
 
 ## Abstraction
 
 Geopandas and python lends to easy and efficient abstraction. Enter tracts, senate, and crs as arguments for the function. 
 
-    ```py
+```py
 
-    def awr(tracts, senate, crs=3437):
-        # Step 1: reproject both layers to the same CRS
-        tracts = tracts.to_crs(crs)
-        senate = senate.to_crs(crs)
+def awr(tracts, senate, crs=3437):
+    # Step 1: reproject both layers to the same CRS
+    tracts = tracts.to_crs(crs)
+    senate = senate.to_crs(crs)
 
-        # Step 2: source polygon area
-        tracts["sArea"] = tracts.geometry.area
+    # Step 2: source polygon area
+    tracts["sArea"] = tracts.geometry.area
 
-        # Step 3: intersect tracts with districts
-        frags = gpd.overlay(
-            tracts,
-            senate[["Senate2022", "geometry"]],  # keep only what you need to avoid column clashes
-            how="intersection",
-            keep_geom_type=True,
-        )
+    # Step 3: intersect tracts with districts
+    frags = gpd.overlay(
+        tracts,
+        senate[["Senate2022", "geometry"]],  # keep only what you need to avoid column clashes
+        how="intersection",
+        keep_geom_type=True,
+    )
 
-        # Step 4: area-weighted attributes
-        frags["fArea"] = frags.geometry.area
-        frags["aw"] = frags["fArea"] / frags["sArea"]
+    # Step 4: area-weighted attributes
+    frags["fArea"] = frags.geometry.area
+    frags["aw"] = frags["fArea"] / frags["sArea"]
 
-        frags["population"] = frags["aw"] * frags["B02001_001E"]
-        frags["white"]      = frags["aw"] * frags["B02001_002E"]
-        frags["black"]      = frags["aw"] * frags["B02001_003E"]
-        frags["asian"]      = frags["aw"] * frags["B02001_005E"]
+    frags["population"] = frags["aw"] * frags["B02001_001E"]
+    frags["white"]      = frags["aw"] * frags["B02001_002E"]
+    frags["black"]      = frags["aw"] * frags["B02001_003E"]
+    frags["asian"]      = frags["aw"] * frags["B02001_005E"]
 
-        # Step 5: sum by district and union geometries
-        aw_districts = (
-            frags[["Senate2022", "population", "white", "black", "asian", "geometry"]]
-            .dissolve(by="Senate2022", aggfunc="sum")
-            .reset_index()
-        )
+    # Step 5: sum by district and union geometries
+    aw_districts = (
+        frags[["Senate2022", "population", "white", "black", "asian", "geometry"]]
+        .dissolve(by="Senate2022", aggfunc="sum")
+        .reset_index()
+    )
 
-        #Step 6: Post-hoc calculations
-        aw_districts["perimeter"] = aw_districts.geometry.length
-        aw_districts[dArea] = aw_districts.geometry.area
-        aw_districts["compactness"] = 4 * 3.14159 * aw_districts[dArea] / (aw_districts["perimeter"] ** 2)
+    #Step 6: Post-hoc calculations
+    aw_districts["perimeter"] = aw_districts.geometry.length
+    aw_districts[dArea] = aw_districts.geometry.area
+    aw_districts["compactness"] = 4 * 3.14159 * aw_districts[dArea] / (aw_districts["perimeter"] ** 2)
 
-        return aw_districts
-
-
-    aw_districts = awr(tracts, senate)
+    return aw_districts
 
 
-    ```
+aw_districts = awr(tracts, senate)
+
+
+```
 
 
 

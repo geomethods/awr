@@ -11,11 +11,11 @@ When discussing gerrymandering through a geospatial lense, a helpful metric to c
 
 The process used to calculate the builds off of functions we used to accomplish the AWR workflow. Use mutate, st_area, and st_perimeter to calculate the compactness of each district.
 
-    ```r
-    aw_districts <- aw_districts %>% 
-        mutate(
-            dArea = as.numeric(st_area(aw_districts)) ,
-            dPerimeter = as.numeric(st_perimeter(aw_districts)) ,
-            compactness = (400 * dArea * 3.1415926)/(dPerimeter^2)
-        )
-    ```
+```r
+aw_districts <- aw_districts %>% 
+    mutate(
+        dArea = as.numeric(st_area(aw_districts)) ,
+        dPerimeter = as.numeric(st_perimeter(aw_districts)) ,
+        compactness = (400 * dArea * 3.1415926)/(dPerimeter^2)
+    )
+```

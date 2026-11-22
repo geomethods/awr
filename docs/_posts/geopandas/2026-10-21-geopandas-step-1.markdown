@@ -39,16 +39,16 @@ pip install jupyterlab
 
 Once the required packages are installed, read in the data to the notebook, and reproject layers into the designated CRS. Paths to read in data may be different. In geopandas, many of the functions are implemented with a `.` followed by the name function and preceded by the name of the object the function is acting on, in this case tracts or senate districts.
 
-    ```py
+```py
 
-    install geopandas as gpd
-    tracts = geopandas.read_file("data/nh_tracts_final.gpkg") 
-    senate = geopandas.read_file("data/New_Hampshire_Senate_District_Boundaries_-_2022.shp")
+install geopandas as gpd
+tracts = geopandas.read_file("data/nh_tracts_final.gpkg") 
+senate = geopandas.read_file("data/New_Hampshire_Senate_District_Boundaries_-_2022.shp")
 
-    tracts = tracts.to_crs(3437)
-    senate = senate.to_crs(3437)
+tracts = tracts.to_crs(3437)
+senate = senate.to_crs(3437)
 
-    ```
+```
 
 
 

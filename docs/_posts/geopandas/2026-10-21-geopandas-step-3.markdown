@@ -10,13 +10,13 @@ tags:
 
 The next step is to perform the union between tracts and senate districts, creating fragments. In order to prevent duplicate columns, limit the columns copied over to the Senate ID and the layers geometry.
 
-    ```r 
+```r 
 
-    frags = gpd.overlay(
-        tracts,
-        senate[["Senate2022", "geometry"]],  #
-        how="union",
-        keep_geom_type=True,
-    )
+frags = gpd.overlay(
+    tracts,
+    senate[["Senate2022", "geometry"]],  
+    how="union",
+    keep_geom_type=True,
+)
 
-    ```
+```

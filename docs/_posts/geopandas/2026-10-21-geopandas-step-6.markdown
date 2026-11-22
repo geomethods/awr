@@ -12,11 +12,11 @@ When discussing gerrymandering through a geospatial lense, a helpful metric to c
 
 Calculate area, perimeter, and compactness using the syntax established in previous posts. 
 
-    ```py
+```py
 
-    aw_districts["dArea"] = aw_districts
-    aw_districts["perimeter"] = aw_districts.geometry.perimeter
-    aw_districts["compactness"] = 4 * 3.14159 * aw_districts[dArea] / (aw_districts["perimeter"] ** 2)
+aw_districts["dArea"] = aw_districts
+aw_districts["perimeter"] = aw_districts.geometry.perimeter
+aw_districts["compactness"] = 4 * 3.14159 * aw_districts[dArea] / (aw_districts["perimeter"] ** 2)
 
-    ```
+```
 
