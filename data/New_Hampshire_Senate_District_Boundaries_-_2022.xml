@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <pubdate>20230202</pubdate>
+                <title>New Hampshire Senate District Boundaries - 2022</title>
+                <edition>One</edition>
+                <geoform>Map</geoform>
+                <pubinfo>
+                    <pubplace/>
+                    <publish>New Hampshire Office of Strategic Initiatives</publish>
+                </pubinfo>
+                <othercit>None</othercit>
+                <onlink>https://nhgeodata.unh.edu/nhgeodata/rest/services/APB/ElectoralDistricts/MapServer/10</onlink>
+                <onlink>https://ftp.granit.unh.edu/GRANIT_Data/Vector_Data/Administrative_and_Political_Boundaries/d-nhsenatedists/NHSenateDistricts2022.zip</onlink>
+                <lworkcit>
+                    <citeinfo>
+                        <pubdate>19860101</pubdate>
+                        <title>NH GRANIT Database</title>
+                    </citeinfo>
+                </lworkcit>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>The New Hampshire Senate District Boundaries, 2022, contains the district boundaries drawn by the New Hampshire Legislature based on the 2020 US Census population count. Boundaries were derived by applying district codes retrieved from the NH Secretary of State web site to the geometry provided by the GRANIT town boundary layer (PBNH).</abstract>
+            <purpose>These data may be used to represent New Hampshire's Senate Districts.</purpose>
+            <supplinf>Data distribution tile: statewide</supplinf>
+        </descript>
+        <timeperd>
+            <timeinfo>
+                <sngdate>
+                    <caldate>20230202</caldate>
+                </sngdate>
+            </timeinfo>
+            <current>Publication Date</current>
+        </timeperd>
+        <status>
+            <progress>Complete</progress>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-72.5947</westbc>
+                <eastbc>-70.6647</eastbc>
+                <northbc>45.3034</northbc>
+                <southbc>42.6936</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>Boundary</themekey>
+                <themekey>District</themekey>
+                <themekey>State</themekey>
+                <themekey>Political</themekey>
+                <themekey>Senate</themekey>
+            </theme>
+            <place>
+                <placekt>None</placekt>
+                <placekey>United States</placekey>
+                <placekey>Northeast</placekey>
+                <placekey>New England</placekey>
+                <placekey>New Hampshire</placekey>
+            </place>
+        </keywords>
+        <accconst>Other Constraints</accconst>
+        <useconst>Not for legal use</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>NH Office of Strategic Initiatives</cntorg>
+                    <cntper>GIS Planner</cntper>
+                </cntorgp>
+                <cntpos>GIS Planner</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>107 Pleasant Street, 3rd Floor</address>
+                    <city>Concord</city>
+                    <state>NH</state>
+                    <postal>03301</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>603-271-2155</cntvoice>
+                <cntfax>603-271-2615</cntfax>
+                <cntemail>OSIinfo@nh.gov</cntemail>
+                <hours>8:00AM-4:30PM, EST</hours>
+            </cntinfo>
+        </ptcontac>
+        <datacred>GRANIT database</datacred>
+        <native>Shapefile</native>
+    </idinfo>
+    <dataqual>
+        <attracc>
+            <attraccr>The primary attribute associated with each polygon is the NH Senate District code. Verification was by visual inspection of the data set against the town listing provided by the NH Secretary of State.</attraccr>
+        </attracc>
+        <logic>Polygon and arc-node topology exists.</logic>
+        <complete>Data is complete for the tile.</complete>
+        <posacc>
+            <horizpa>
+                <horizpar>The data were generated from standard USGS 1:24,000/1:25,000-scale Digital Line Graphs, and thus meet National Map Accuracy standards.</horizpar>
+            </horizpa>
+        </posacc>
+        <posacc>
+            <vertacc>
+                <vertaccr>The data were generated from standard USGS 1:24,000-1:25,000-scale Digital Line Graphs, and thus meet National Map Accuracy standards.</vertaccr>
+            </vertacc>
+        </posacc>
+        <lineage>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>19920101</pubdate>
+                        <title>NH Political Boundaries at 1:24,000 Scale</title>
+                    </citeinfo>
+                </srccite>
+                <srcscale>24000</srcscale>
+                <typesrc>None</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <rngdates>
+                            <begdate>19530101</begdate>
+                            <enddate>19900101</enddate>
+                        </rngdates>
+                    </timeinfo>
+                    <srccurr>Publication Date</srccurr>
+                </srctime>
+                <srccitea>NH Political Boundaries at 1:24,000 Scale</srccitea>
+                <srccontr>Provided basic geometry.</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20220101</pubdate>
+                        <title>"2022 - New Hampshire State Senate Districts"</title>
+                    </citeinfo>
+                </srccite>
+                <srcscale>0</srcscale>
+                <typesrc>None</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <sngdate>
+                            <caldate>20220101</caldate>
+                        </sngdate>
+                    </timeinfo>
+                    <srccurr>Publication Date</srccurr>
+                </srctime>
+                <srccitea>"2022 - New Hampshire State Senate Districts"</srccitea>
+                <srccontr>Provided the listing of towns in each of NH Senate Districts.</srccontr>
+            </srcinfo>
+            <procstep>
+                <procdesc>Attribute was added to PBNH to capture the Senate District for each town. TOWNLISTINGS was used to populate the field. Results were "dissolved" to generate the Senate District boundaries.</procdesc>
+                <procdate>20230202</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>NH Office of Strategic Initiatives</cntorg>
+                            <cntper>GIS Planner</cntper>
+                        </cntorgp>
+                        <cntpos>GIS Planner</cntpos>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>107 Pleasant Street, 3rd Floor</address>
+                            <city>Concord</city>
+                            <state>NH</state>
+                            <postal>03301</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntvoice>603-271-2155</cntvoice>
+                        <cntfax>603-271-2615</cntfax>
+                        <cntemail>OSIinfo@nh.gov</cntemail>
+                        <hours>8:00AM-4:30PM, EST</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>GT-polygon composed of chains</sdtstype>
+                <ptvctcnt>24</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>NHSenateDists2022</enttypl>
+                <enttypd>Defines State Senate Districts in NH</enttypd>
+                <enttypds>None</enttypds>
+            </enttyp>
+            <attr>
+                <attrlabl>FID</attrlabl>
+                <attrdef>Internal feature number</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Shape</attrlabl>
+                <attrdef>Feature geometry</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Coordinates defining the features.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>SENATE2022</attrlabl>
+                <attrdef>NH Senate District</attrdef>
+                <attrdefs>None</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>20</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 20</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>11</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 11</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>9</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 9</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>16</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 16</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>17</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 17</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>10</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 10</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>8</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 8</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>3</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 3</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>2</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 2</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>1</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 1</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>7</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 7</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>6</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 6</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>12</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 12</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>18</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 18</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>5</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 5</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>14</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 14</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>15</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 15</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>24</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 24</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>19</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 19</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>23</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 23</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>22</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 22</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>13</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 13</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>4</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 4</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>21</edomv>
+                                                						
+                        
+                        <edomvd>NH Senate District 21</edomvd>
+                                                						
+                        
+                        <edomvds>None</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+        </detailed>
+    </eainfo>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Earth Systems Research Center</cntorg>
+                    <cntper>GRANIT Database Manager</cntper>
+                </cntorgp>
+                <cntpos>GRANIT Database Manager</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>Morse Hall, University of New Hampshire</address>
+                    <city>Durham</city>
+                    <state>NH</state>
+                    <postal>03824</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>603-862-1214</cntvoice>
+                <cntfax>603-862-0188</cntfax>
+                <cntemail>granit@unh.edu</cntemail>
+                <hours>9AM-5PM, EST</hours>
+            </cntinfo>
+        </distrib>
+        <resdesc>NHSenateDists2022 - shapefile</resdesc>
+        <distliab>Digital data in NH GRANIT represent the efforts of the contributing agencies to record information from the cited source materials. Earth Systems Research Center, under contract to the NH Office of Strategic Initiatives, and in consultation with cooperating agencies, maintains a continuing program to identify and correct errors in these data. OSI, ESRC, and the cooperating agencies make no claim as to the validity or reliability or to any implied uses of these data.</distliab>
+        <stdorder>
+            <digform>
+                <digtinfo>
+                    <formname>ESRI shapefile</formname>
+                </digtinfo>
+                <digtopt>
+                    <onlinopt/>
+                </digtopt>
+            </digform>
+            <fees>No charge when downloaded from the internet. Cost of reproduction for provision on CD/ROM or other media.</fees>
+            <ordering>Mail or fax a copy of the GRANIT "Data Request Form" from the GRANIT Data Catalog. Delivery Time: Two weeks</ordering>
+        </stdorder>
+    </distinfo>
+    <metainfo>
+        <metd>20230202</metd>
+        <metrd>20230202</metrd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>NH Office of Strategic Initiatives</cntorg>
+                    <cntper>GIS Planner</cntper>
+                </cntorgp>
+                <cntpos>GIS Planner</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>107 Pleasant Street, 3rd Floor</address>
+                    <city>Concord</city>
+                    <state>NH</state>
+                    <postal>03301</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>603-271-2155</cntvoice>
+                <cntfax>603-271-2615</cntfax>
+                <cntemail>OSIinfo@nh.gov</cntemail>
+                <hours>8:00AM-4:30PM, EST</hours>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>
