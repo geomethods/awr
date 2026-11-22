@@ -10,19 +10,19 @@ tags:
 
 The process of installing the required dependencies to run geopandas is somewhat cumbersome, but worthwhile for the benefits of platform. See [geopandas](https://geopandas.org/en/stable/) installation instructions for more information on installing this specific package. Also see instructions to install [jupyter notebooks](https://jupyter.org/install) , the package we suggest for running a local python server. We run python on VSCode, and install packages using the command terminal. When code is ran, we first run the `jupyter notebook` terminal command to start a local server for the code. The workflow was developed on following packages and package versions. The Terminal Commands used to install these packages were also provided
 
-**Geopandas**: Version 1.2
-
-```
-
-pip install geopandas
-
-```
-
 **Conda**: Version: 26.9.4 (Required for installing python packages)
 
 ```
 
 pip install conda
+
+```
+
+**Geopandas**: Version 1.2
+
+```
+
+pip install geopandas
 
 ```
 

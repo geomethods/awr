@@ -25,9 +25,9 @@ Many key terms have an associated reference from the GIS Body of Knowledge Textb
 
 `Union`: A geospatial operation and relationship that takes two data layers and creates an output that keeps the geometry and attributes from both layers, creating fragments. [BoK](https://gistbok-ltb.ucgis.org/page/current/concept/AM-02-004)
 
-`Fragment`: The resulting geometry from a union, containing the polygon inputs [BoK](https://gistbok-ltb.ucgis.org/page/current/concept/GS-02-020)
+`Fragment`: The resulting geometry from a union, containing the polygon inputs [BoK](https://gistbok-ltb.ucgis.org/page/current/concept/AM-02-004)
 
-`Group By`: An geospatial operation that groups polygons of a common attribute, also dissolving geometries and summing attributes by groups (AKA Dissolve) [BoK](https://gistbok-ltb.ucgis.org/page/current/concept/FC-05-016)
+`Group By`: An geospatial operation that groups polygons of a common attribute, also dissolving geometries and summing attributes by groups (AKA Dissolve) [BoK](https://gistbok-ltb.ucgis.org/current/concept/DM-06-085)
 
 `Compactness`: A metric that uses area and perimeter to determine the annularity of a given geometry; how close a given district is to a circle. [BoK](https://gistbok-ltb.ucgis.org/page/current/concept/GS-02-020)
 
